@@ -1225,6 +1225,7 @@
                         <BGR1FD>false</BGR1FD>
                         <DebugTimer>0</DebugTimer>
                         <ReverseSpeedMultiplier>1</ReverseSpeedMultiplier>
+                        <TimeToBeginReverse>0.333</TimeToBeginReverse>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1258,6 +1259,7 @@
                         <BGR1FD>false</BGR1FD>
                         <DebugTimer>0</DebugTimer>
                         <ReverseSpeedMultiplier>1</ReverseSpeedMultiplier>
+                        <TimeToBeginReverse>0.333</TimeToBeginReverse>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1291,6 +1293,7 @@
                         <BGR1FD>false</BGR1FD>
                         <DebugTimer>0</DebugTimer>
                         <ReverseSpeedMultiplier>1</ReverseSpeedMultiplier>
+                        <TimeToBeginReverse>0.333</TimeToBeginReverse>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1324,6 +1327,7 @@
                         <BGR1FD>false</BGR1FD>
                         <DebugTimer>0</DebugTimer>
                         <ReverseSpeedMultiplier>1</ReverseSpeedMultiplier>
+                        <TimeToBeginReverse>0.333</TimeToBeginReverse>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1475,6 +1479,35 @@
                         <depth>0</depth>
                         <hotspotX>0.501650155</hotspotX>
                         <hotspotY>0.503703713</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="StabbingSpear" uid="92">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TimeMarker>0</TimeMarker>
+                        <RiseSpeed>50</RiseSpeed>
+                        <RiseTime>0.4666</RiseTime>
+                        <Rising>true</Rising>
+                        <StabSpeed>275</StabSpeed>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>575</x>
+                        <y>150</y>
+                        <z>0</z>
+                        <width>18</width>
+                        <height>60</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.483333319</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

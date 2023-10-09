@@ -1,11 +1,12 @@
 ﻿{
-	"version": 1696203803,
+	"version": 1696347886,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
 		"jquery-3.4.1.min.js",
 		"offlineClient.js",
 		"images/vpad-sheet0.png",
+		"images/camera-sheet0.png",
 		"images/hpbackground.png",
 		"images/hpbar.png",
 		"images/krbar.png",
@@ -84,7 +85,6 @@
 		"images/heartshard-sheet1.png",
 		"images/heartshard-sheet2.png",
 		"images/playerhitbox-sheet0.png",
-		"images/sprite-sheet0.png",
 		"images/spinningspear-sheet0.png",
 		"images/undyneslash-sheet0.png",
 		"media/ding.ogg",

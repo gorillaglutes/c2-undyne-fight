@@ -1951,6 +1951,48 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="StabbingSpear" sid="819158422423645">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="TimeMarker" sid="327993787368857" type="number" />
+                <instance-variable name="RiseSpeed" sid="470907657588353" type="number" />
+                <instance-variable name="RiseTime" sid="276535513995741" type="number" />
+                <instance-variable name="Rising" sid="712194332368711" type="boolean" />
+                <instance-variable name="StabSpeed" sid="874861849687123" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="797361171318319" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.483333" original-source="C:\Users\Sid\c2-undyne-fight\Textures\ArrowNoOutline.png">
+                        <collision-poly>
+                            <point x="0.277777" y="0.116666" />
+                            <point x="0.5" y="0.0166666" />
+                            <point x="0.722223" y="0.116666" />
+                            <point x="0.611111" y="0.483333" />
+                            <point x="0.611111" y="0.816666" />
+                            <point x="0.5" y="0.983333" />
+                            <point x="0.388889" y="0.816666" />
+                            <point x="0.388889" y="0.483333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="713195970461102">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="742096114605762" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="153894509442072">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="755978874605021" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="BoneStab" plugin-id="NinePatch" sid="9321183475132962">
@@ -2094,6 +2136,7 @@
                 <instance-variable name="BGR1FD" sid="821548184602361" type="boolean" />
                 <instance-variable name="DebugTimer" sid="333916492495363" type="number" />
                 <instance-variable name="ReverseSpeedMultiplier" sid="617819402594352" type="number" />
+                <instance-variable name="TimeToBeginReverse" sid="106472324651024" type="number" />
             </instance-variables>
         </family>
         <family name="TargetChoice" plugin-id="Sprite" sid="995886500926932">

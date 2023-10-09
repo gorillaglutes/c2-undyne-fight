@@ -28,7 +28,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="0">
+    <families-expanded root="1">
         <family expanded="0" name="BoneStab" />
         <family expanded="0" name="Bone" />
         <family expanded="0" name="RPGText" />
@@ -110,5 +110,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/SpinningSpear/" />
         <folder expanded="1" path="animation-folder/UndyneSlash/" />
         <folder expanded="1" path="animation-folder/UndyneSlashProjectile/" />
+        <folder expanded="1" path="animation-folder/StabbingSpear/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
     </folders-expanded>
 </c2uistate>

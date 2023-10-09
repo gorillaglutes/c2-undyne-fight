@@ -82,11 +82,6 @@
                             <param id="1" name="Value">&quot;sans_multi3&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
-                        <action disabled="1" id="5" name="Push" sid="9455036665125524" type="AttackLoader">
-                            <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">&quot;sans_platformblaster&quot;</param>
-                            <param id="2" name="Axis">0</param>
-                        </action>
                         <action disabled="1" id="5" name="Push" sid="6647189041973594" type="AttackLoader">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">&quot;sans_platformblasterfast&quot;</param>
@@ -97,19 +92,24 @@
                             <param id="1" name="Value">&quot;sans_platforms1&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
-                        <action disabled="1" id="5" name="Push" sid="7745298823847402" type="AttackLoader">
+                        <action id="5" name="Push" sid="7745298823847402" type="AttackLoader">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">&quot;sans_platforms2&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
-                        <action disabled="1" id="5" name="Push" sid="1260174120863198" type="AttackLoader">
+                        <action id="5" name="Push" sid="1260174120863198" type="AttackLoader">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">&quot;sans_platforms3&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
-                        <action disabled="1" id="5" name="Push" sid="8766372860492814" type="AttackLoader">
+                        <action id="5" name="Push" sid="8766372860492814" type="AttackLoader">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">&quot;sans_platforms4&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="9455036665125524" type="AttackLoader">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;sans_platformblaster&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
                         <action disabled="1" id="5" name="Push" sid="9777307155362394" type="AttackLoader">
