@@ -423,7 +423,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>32</x>
+                        <x>33</x>
                         <y>240</y>
                         <z>0</z>
                         <width>576</width>

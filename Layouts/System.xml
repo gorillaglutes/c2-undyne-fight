@@ -1512,6 +1512,49 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="RotatingSpear" uid="94">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <spinning>true</spinning>
+                        <rotspeed>25</rotspeed>
+                        <timeMarker>0</timeMarker>
+                        <speed>5</speed>
+                        <TargetXPos>0</TargetXPos>
+                        <TargetYPos>0</TargetYPos>
+                        <lifetime>10</lifetime>
+                        <index>0</index>
+                        <initialDist>0</initialDist>
+                        <totalSpears>0</totalSpears>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Tint">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>575</x>
+                        <y>225</y>
+                        <z>0</z>
+                        <width>60</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.25</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>

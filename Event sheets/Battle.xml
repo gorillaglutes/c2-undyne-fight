@@ -6917,6 +6917,263 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="837946338143265" title="RotatingSpear">
+            <sub-events>
+                <variable constant="0" name="lastpause" sid="158258636311531" static="0" type="number">0</variable>
+                <event-block sid="838819694996914">
+                    <conditions>
+                        <condition id="0" name="On function" sid="406598034157907" type="Function">
+                            <param id="0" name="Name">&quot;RotatingSpear&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="i" sid="393852450792437" static="0" type="number">0</variable>
+                        <event-block sid="686097780254573">
+                            <conditions>
+                                <condition id="-10" name="For" sid="970568153024506" type="System">
+                                    <param id="0" name="Name">&quot;eachSpear&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">int(Function.Param(0))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="459766141809669" type="System">
+                                    <param id="0" name="Object to create">RotatingSpear</param>
+                                    <param id="1" name="Layer">5</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="352780924453509" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="259079536571259" type="RotatingSpear">
+                                    <param id="0" name="Angle">(360 * (i / int(Function.Param(0))))</param>
+                                </action>
+                                <action disabled="1" id="-18" name="Rotate clockwise" sid="972165645633670" type="RotatingSpear">
+                                    <param id="0" name="Degrees">90</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="577455549303720" type="RotatingSpear">
+                                    <param id="0" name="X">PlayerHeart.X</param>
+                                    <param id="1" name="Y">PlayerHeart.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="982049877395423" type="RotatingSpear">
+                                    <param id="0" name="Instance variable">TargetXPos</param>
+                                    <param id="1" name="Value">PlayerHitbox.X</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="290239967769120" type="RotatingSpear">
+                                    <param id="0" name="Instance variable">TargetYPos</param>
+                                    <param id="1" name="Value">PlayerHitbox.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="325981118452049" type="RotatingSpear">
+                                    <param id="0" name="Instance variable">totalSpears</param>
+                                    <param id="1" name="Value">int(Function.Param(0))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="593081154048356" type="RotatingSpear">
+                                    <param id="0" name="Instance variable">speed</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="774608780568555" type="RotatingSpear">
+                                    <param id="0" name="Instance variable">rotspeed</param>
+                                    <param id="1" name="Value">int(Function.Param(2))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="931256140622753" type="RotatingSpear">
+                                    <param id="0" name="Instance variable">lifetime</param>
+                                    <param id="1" name="Value">int(Function.Param(3))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="848944487150320" type="RotatingSpear">
+                                    <param id="0" name="Instance variable">initialDist</param>
+                                    <param id="1" name="Value">int(Function.Param(4))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="707930059953872" type="RotatingSpear">
+                                    <param id="0" name="Instance variable">index</param>
+                                    <param id="1" name="Value">i</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="698624937979844" type="RotatingSpear">
+                                    <param id="0" name="Instance variable">timeMarker</param>
+                                    <param id="1" name="Value">time</param>
+                                </action>
+                                <action disabled="1" id="-17" name="Move forward" sid="159260312363074" type="RotatingSpear">
+                                    <param id="0" name="Distance">-1 * RotatingSpear.initialDist</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="193916784871913">
+                    <conditions>
+                        <condition id="0" name="On function" sid="775023609167081" type="Function">
+                            <param id="0" name="Name">&quot;PauseRotatingSpear&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="363826466768112">
+                            <conditions>
+                                <condition id="-19" name="Pick all" sid="161952734741229" type="System">
+                                    <param id="0" name="Object">RotatingSpear</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="677181575936318" type="RotatingSpear">
+                                    <param id="0" name="Instance variable">spinning</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="182781752615226" type="System">
+                                    <param id="0" name="Variable">lastpause</param>
+                                    <param id="1" name="Value">time</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <variable constant="1" name="OPACITYRATE" sid="453531622840618" static="0" type="number">100</variable>
+                <variable constant="0" name="lastX" sid="329411388827589" static="1" type="number">0</variable>
+                <variable constant="0" name="lastY" sid="517733902112789" static="1" type="number">0</variable>
+                <variable constant="0" name="slowmod" sid="304940192828285" static="1" type="number">1.5</variable>
+                <variable constant="1" name="opTimeEst" sid="201899524348502" static="1" type="number">0.96</variable>
+                <variable constant="1" name="OPRATE" sid="814332379799057" static="1" type="number">1125</variable>
+                <variable constant="0" name="shrink" sid="916252937204777" static="1" type="number">0.15</variable>
+                <event-block sid="117693486579808">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="557244914875772" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="948977063675426">
+                            <conditions>
+                                <condition id="-19" name="Pick all" sid="650244019173745" type="System">
+                                    <param id="0" name="Object">RotatingSpear</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-23" name="Move at angle" sid="734096097664428" type="RotatingSpear">
+                                    <param id="0" name="Angle">90</param>
+                                    <param id="1" name="Distance">RotatingSpear.rotspeed*dt</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="114476264050625">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="375655257995221" type="RotatingSpear">
+                                            <param id="0" name="Instance variable">spinning</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="427928718197494">
+                                            <conditions>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="125627967332970" type="RotatingSpear">
+                                                    <param id="0" name="Instance variable">lifetime</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">(time - RotatingSpear.timeMarker)/opTimeEst</param>
+                                                </condition>
+                                                <condition id="-10" name="Compare opacity" sid="992942449389136" type="RotatingSpear">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Opacity">100</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Set opacity" sid="715124469218592" type="RotatingSpear">
+                                                    <param id="0" name="Opacity">RotatingSpear.Opacity + OPRATE*dt</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block any="1" sid="797781175239579">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="322351838665142" type="RotatingSpear">
+                                                    <param id="0" name="Instance variable">lifetime</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">(time - RotatingSpear.timeMarker)/opTimeEst</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Set opacity" sid="883854515474242" type="RotatingSpear">
+                                                    <param id="0" name="Opacity">RotatingSpear.Opacity - OPRATE*dt</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="514715474784897">
+                                            <conditions>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="694416007142963" type="RotatingSpear">
+                                                    <param id="0" name="Instance variable">lifetime</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">time - RotatingSpear.timeMarker</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="556090751347722" type="System">
+                                                    <param id="0" name="Variable">lastX</param>
+                                                    <param id="1" name="Value">RotatingSpear.X</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="544528990092201" type="System">
+                                                    <param id="0" name="Variable">lastY</param>
+                                                    <param id="1" name="Value">RotatingSpear.Y</param>
+                                                </action>
+                                                <action disabled="1" id="-23" name="Move at angle" sid="683651225726586" type="RotatingSpear">
+                                                    <param id="0" name="Angle">RotatingSpear.Angle + 90</param>
+                                                    <param id="1" name="Distance">RotatingSpear.rotspeed * dt</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="192582882610186" type="RotatingSpear">
+                                                    <param id="0" name="X">RotatingSpear.TargetXPos + RotatingSpear.initialDist * cos(((RotatingSpear.rotspeed-RotatingSpear.rotspeed*(time-RotatingSpear.timeMarker)/RotatingSpear.lifetime/2) * (time - RotatingSpear.timeMarker) + (360 * RotatingSpear.index / RotatingSpear.totalSpears)))</param>
+                                                    <param id="1" name="Y">RotatingSpear.TargetYPos + RotatingSpear.initialDist * sin(((RotatingSpear.rotspeed-RotatingSpear.rotspeed*(time-RotatingSpear.timeMarker)/RotatingSpear.lifetime/2) * (time - RotatingSpear.timeMarker) + (360 * RotatingSpear.index / RotatingSpear.totalSpears)))</param>
+                                                </action>
+                                                <action id="-22" name="Set angle toward position" sid="409075720526195" type="RotatingSpear">
+                                                    <param id="0" name="X">RotatingSpear.TargetXPos</param>
+                                                    <param id="1" name="Y">RotatingSpear.TargetYPos</param>
+                                                </action>
+                                                <action id="-17" name="Move forward" sid="309198777352792" type="RotatingSpear">
+                                                    <param id="0" name="Distance">((time - RotatingSpear.timeMarker) / RotatingSpear.lifetime ) * RotatingSpear.initialDist</param>
+                                                </action>
+                                                <action id="9" name="Set scale" sid="140227560797704" type="RotatingSpear">
+                                                    <param id="0" name="Scale">1 - ((time-RotatingSpear.timeMarker)/RotatingSpear.lifetime) * shrink</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="938731972895744">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="753947960052559" type="RotatingSpear">
+                                                    <param id="0" name="Instance variable">lifetime</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">time - RotatingSpear.timeMarker</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="836995621261015" type="RotatingSpear" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block any="1" sid="891817083389315">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="714105102624200" type="RotatingSpear">
+                                            <param id="0" name="Instance variable">spinning</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="787625375912811" type="RotatingSpear">
+                                            <param id="0" name="Opacity">RotatingSpear.Opacity - OPRATE*dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="777748812562434">
+                                    <conditions>
+                                        <condition id="-10" name="Compare opacity" sid="234341310525957" type="RotatingSpear">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="Opacity">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="405241198380510" type="RotatingSpear" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="6115443361825044" title="Bones">
             <sub-events>
                 <event-block sid="4695619220070591">
